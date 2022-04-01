@@ -1,80 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <div id="container">
 
-  Report for
-  Jeremy Robson
+    <div id="mainCard">
+      <div id="user">
+        <div id="userAvatar">
+          <img src="images/image-jeremy.png" alt="avatar">
+        </div>
+        <div id="userData">
+          <div id="reportFor">Report for</div>
+          <h2 id="userName">Jeremy Robson</h2>
+        </div>
+      </div>
+      <!--fin user-->
 
-  Daily
-  Weekly
-  Monthly
+      <div id="times">
+        <p id="daily">Daily</p>
+        <p id="Weekly">Weekly</p>
+        <p id="Monthly">Monthly</p>
+      </div>
+    </div>
+    <!--fin mainCard-->
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <div class="card" id="workCard">
+      <div class="cardData">
+        <div class="cardDataHead">
+          <h3 class="cardName">Work</h3>
+          <span class="cardMenu">...</span>
+        </div>
+        <div class="cardDataResults">
+          <p class="totalTime">5hrs</p>
+          <p class="last">Last Day - 7hrs</p>
+        </div>
+      </div>
+    </div> <!-- fin workCard-->
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <div class="card" id="playCard">
+      <div class="cardData">
+        <div class="cardDataHead">
+          <h3 class="cardName">Play</h3>
+          <span class="cardMenu">...</span>
+        </div>
+        <div class="cardDataResults">
+          <p class="totalTime">1hrs</p>
+          <p class="last">Last Day - 2hrs</p>
+        </div>
+      </div>
+    </div> <!-- fin playCard-->
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <div class="card" id="studyCard">
+      <div class="cardData">
+        <div class="cardDataHead">
+          <h3 class="cardName">Study</h3>
+          <span class="cardMenu">...</span>
+        </div>
+        <div class="cardDataResults">
+          <p class="totalTime">0hrs</p>
+          <p class="last">Last Day - 1hrs</p>
+        </div>
+      </div>
+    </div> <!-- fin  studyCard-->
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+    <div class="card" id="exerciseCard">
+      <div class="cardData">
+        <div class="cardDataHead">
+          <h3 class="cardName">Exercise</h3>
+          <span class="cardMenu">...</span>
+        </div>
+        <div class="cardDataResults">
+          <p class="totalTime">1hrs</p>
+          <p class="last">Last Day - 1hrs</p>
+        </div>
+      </div>
+    </div> <!-- fin  exerciseCard-->
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+    <div class="card" id="socialCard">
+      <div class="cardData">
+        <div class="cardDataHead">
+          <h3 class="cardName">Social</h3>
+          <span class="cardMenu">...</span>
+        </div>
+        <div class="cardDataResults">
+          <p class="totalTime">1hrs</p>
+          <p class="last">Last Day - 3hrs</p>
+        </div>
+      </div>
+    </div> <!-- fin  socialCard-->
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+    <div class="card" id="selfCareCard">
+      <div class="cardData">
+        <div class="cardDataHead">
+          <h3 class="cardName">Self Care</h3>
+          <span class="cardMenu">...</span>
+        </div>
+        <div class="cardDataResults">
+          <p class="totalTime">0hrs</p>
+          <p class="last">Last Day - 1hrs</p>
+        </div>
+      </div>
+    </div> <!-- fin  selfCareCardard-->
+  </div>
+  <!--fin container -->
 
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="js/app.js"></script>
 </body>
+
 </html>

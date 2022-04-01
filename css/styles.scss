@@ -1,0 +1,178 @@
+// Primary colors
+$colorBlue: hsl(246, 80%, 60%);
+$colorLightRedWork: hsl(15, 100%, 70%);
+$colorSoftBluePlay: hsl(195, 74%, 62%);
+$colorLightRedStudy: hsl(348, 100%, 68%);
+$colorLimeGreenExercise: hsl(145, 58%, 55%);
+$colorVioletSocial: hsl(264, 64%, 52%);
+$colorSoftOrangeSelfCare: hsl(43, 84%, 65%);
+
+// Neutral colors
+$colorVeryDarkBlue: hsl(226, 43%, 10%);
+$colorDarkBlue: hsl(235, 46%, 20%);
+$colorDesaturatedBlue: hsl(235, 45%, 61%);
+$colorPaleBlue: hsl(236, 100%, 87%);
+
+// Typography Body Copy
+$tyoFontSize: 18px; // (card titles e.g. Work, Play)
+$typFontFamily: "Rubik", sans-serif; //Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+$typFontWeightLight: 300;
+$typFontWeightRegular: 400;
+$typFontWeightMedium: 500;
+
+* {
+    // margin: 0px;
+    // padding: 0px;
+    box-sizing: border-box;
+    font-family: $typFontFamily;
+    font-size: $tyoFontSize;
+    color: $colorDesaturatedBlue;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorVeryDarkBlue;
+
+    #container {
+        width: 330px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content repeat(6, 1fr);
+        row-gap: 20px;
+
+        #mainCard {
+            width: 100%;
+            background-color: $colorDarkBlue;
+            grid-template-columns: 1/2;
+            grid-template-rows: 1 / span 1;
+            border-radius: 15px;
+            #user {
+                width: 100%;
+                padding: 30px 0px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                border-radius: 15px;
+                background-color: $colorBlue;
+
+                #userAvatar {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    border: 3px solid white;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                #userData {
+                    #reportFor {
+                        font-size: 0.8em;
+                    }
+                    #userName {
+                        margin: 0px;
+                        font-size: 1.4em;
+                        font-weight: $typFontWeightLight;
+                        color: white;
+                    }
+                }
+            } // user
+            #times {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+        } //fin mainCard
+
+        .card {
+            width: 100%;
+            height: 160px;
+            grid-template-columns: 1/2;
+            border-radius: 15px;
+            background-repeat: no-repeat;
+            background-position: 95% -8%;
+            position: relative;
+
+            .cardData {
+                width: 100%;
+                height: 125px;
+                padding: 25px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                border-radius: 13px;
+                background-color: $colorDarkBlue;
+                position: absolute;
+                bottom: 0px;
+
+                .cardDataHead {
+                    width: 100%;
+                    // padding: 30px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .cardName {
+                        margin: 0px;
+                        color: white;
+                        font-weight: $typFontWeightMedium;
+                    }
+                    .cardMenu {
+                        font-size: 1.5em;
+                    }
+                } //fin carDataHead
+
+                .cardDataResults {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .totalTime {
+                        margin: 0px;
+                        font-size: 2em;
+                        font-weight: $typFontWeightLight;
+                        color: white;
+                    }
+                    .last {
+                        margin: 0px;
+                    }
+                } //fin cardDataResults
+            } //fincardData
+        } //fin card
+        #workCard {
+            grid-template-rows: 2 / span 1;
+            background-color: $colorLightRedWork;
+            background-image: url(../images/icon-work.svg);
+        } //fin workCard
+        #playCard {
+            grid-template-rows: 3 / span 1;
+            background-color: $colorSoftBluePlay;
+            background-image: url(../images/icon-play.svg);
+        } //fin playCard
+        #studyCard {
+            grid-template-rows: 4 / span 1;
+            background-color: $colorLightRedStudy;
+            background-image: url(../images/icon-study.svg);
+        } //fin studyCard
+        #exerciseCard {
+            grid-template-rows: 5 / span 1;
+            background-color: $colorLimeGreenExercise;
+            background-image: url(../images/icon-exercise.svg);
+        } //fin exersiceCard
+        #socialCard {
+            grid-template-rows: 6 / span 1;
+            background-color: $colorVioletSocial;
+            background-image: url(../images/icon-social.svg);
+        } //fin socialCard
+        #selfCareCard {
+            grid-template-rows: 7 / span 1;
+            background-color: $colorSoftOrangeSelfCare;
+            background-image: url(../images/icon-self-care.svg);
+        } //fin selfCareCard
+    } //fin container
+} //fin body
