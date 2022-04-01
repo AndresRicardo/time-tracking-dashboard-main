@@ -40,6 +40,7 @@ body {
 
     #container {
         width: 330px;
+        padding: 80px 0px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: min-content repeat(6, 1fr);
@@ -73,6 +74,8 @@ body {
                 #userData {
                     #reportFor {
                         font-size: 0.8em;
+                        color: $colorPaleBlue;
+                        font-weight: $typFontWeightMedium;
                     }
                     #userName {
                         margin: 0px;
@@ -81,11 +84,20 @@ body {
                         color: white;
                     }
                 }
-            } // user
+            } // fin user
+
             #times {
                 width: 100%;
+                margin: 25px 0px;
                 display: flex;
                 justify-content: space-around;
+
+                a {
+                    cursor: pointer;
+                }
+                a:active {
+                    color: white;
+                }
             }
         } //fin mainCard
 
@@ -124,6 +136,7 @@ body {
                     }
                     .cardMenu {
                         font-size: 1.5em;
+                        font-weight: $typFontWeightMedium;
                     }
                 } //fin carDataHead
 
@@ -140,39 +153,57 @@ body {
                     }
                     .last {
                         margin: 0px;
+                        color: $colorPaleBlue;
+                        font-size: 0.8em;
                     }
                 } //fin cardDataResults
             } //fincardData
         } //fin card
+
         #workCard {
             grid-template-rows: 2 / span 1;
             background-color: $colorLightRedWork;
             background-image: url(../images/icon-work.svg);
         } //fin workCard
+
         #playCard {
             grid-template-rows: 3 / span 1;
             background-color: $colorSoftBluePlay;
             background-image: url(../images/icon-play.svg);
         } //fin playCard
+
         #studyCard {
             grid-template-rows: 4 / span 1;
             background-color: $colorLightRedStudy;
             background-image: url(../images/icon-study.svg);
         } //fin studyCard
+
         #exerciseCard {
             grid-template-rows: 5 / span 1;
             background-color: $colorLimeGreenExercise;
             background-image: url(../images/icon-exercise.svg);
         } //fin exersiceCard
+
         #socialCard {
             grid-template-rows: 6 / span 1;
             background-color: $colorVioletSocial;
             background-image: url(../images/icon-social.svg);
         } //fin socialCard
+
         #selfCareCard {
             grid-template-rows: 7 / span 1;
             background-color: $colorSoftOrangeSelfCare;
             background-image: url(../images/icon-self-care.svg);
         } //fin selfCareCard
     } //fin container
+
+    .attribution {
+        font-size: 0.6em;
+        color: $colorBlue;
+        a {
+            font-size: 1.2em;
+            text-decoration: none;
+            color: $colorLimeGreenExercise;
+        }
+    }
 } //fin body
