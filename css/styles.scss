@@ -10,6 +10,7 @@ $colorSoftOrangeSelfCare: hsl(43, 84%, 65%);
 // Neutral colors
 $colorVeryDarkBlue: hsl(226, 43%, 10%);
 $colorDarkBlue: hsl(235, 46%, 20%);
+$colorDarkBlueHover: hsl(236, 45%, 30%);
 $colorDesaturatedBlue: hsl(235, 45%, 61%);
 $colorPaleBlue: hsl(236, 100%, 87%);
 
@@ -44,13 +45,13 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: min-content repeat(6, 1fr);
-        row-gap: 20px;
+        gap: 20px;
 
         #mainCard {
             width: 100%;
             background-color: $colorDarkBlue;
-            grid-template-columns: 1/2;
-            grid-template-rows: 1 / span 1;
+            grid-column: 1/2;
+            grid-row: 1 / span 1;
             border-radius: 15px;
             #user {
                 width: 100%;
@@ -94,9 +95,10 @@ body {
 
                 a {
                     cursor: pointer;
+                    text-decoration: none;
                 }
-                a:active {
-                    color: white;
+                a:hover {
+                    color: $colorPaleBlue;
                 }
             }
         } //fin mainCard
@@ -104,7 +106,7 @@ body {
         .card {
             width: 100%;
             height: 160px;
-            grid-template-columns: 1/2;
+            // grid-column: 1 / span 1;
             border-radius: 15px;
             background-repeat: no-repeat;
             background-position: 95% -8%;
@@ -112,7 +114,7 @@ body {
 
             .cardData {
                 width: 100%;
-                height: 125px;
+                height: 78%;
                 padding: 25px 20px;
                 display: flex;
                 flex-direction: column;
@@ -137,6 +139,10 @@ body {
                     .cardMenu {
                         font-size: 1.5em;
                         font-weight: $typFontWeightMedium;
+                        cursor: pointer;
+                    }
+                    .cardMenu:hover {
+                        color: $colorPaleBlue;
                     }
                 } //fin carDataHead
 
@@ -157,41 +163,44 @@ body {
                         font-size: 0.8em;
                     }
                 } //fin cardDataResults
-            } //fincardData
+            } //fin cardData
+            .cardData:hover {
+                background-color: $colorDarkBlueHover;
+            }
         } //fin card
 
         #workCard {
-            grid-template-rows: 2 / span 1;
+            // grid-row: 2 / span 1;
             background-color: $colorLightRedWork;
             background-image: url(../images/icon-work.svg);
         } //fin workCard
 
         #playCard {
-            grid-template-rows: 3 / span 1;
+            // grid-row: 3 / span 1;
             background-color: $colorSoftBluePlay;
             background-image: url(../images/icon-play.svg);
         } //fin playCard
 
         #studyCard {
-            grid-template-rows: 4 / span 1;
+            // grid-row: 4 / span 1;
             background-color: $colorLightRedStudy;
             background-image: url(../images/icon-study.svg);
         } //fin studyCard
 
         #exerciseCard {
-            grid-template-rows: 5 / span 1;
+            // grid-row: 5 / span 1;
             background-color: $colorLimeGreenExercise;
             background-image: url(../images/icon-exercise.svg);
         } //fin exersiceCard
 
         #socialCard {
-            grid-template-rows: 6 / span 1;
+            // grid-row: 6 / span 1;
             background-color: $colorVioletSocial;
             background-image: url(../images/icon-social.svg);
         } //fin socialCard
 
         #selfCareCard {
-            grid-template-rows: 7 / span 1;
+            // grid-row: 7 / span 1;
             background-color: $colorSoftOrangeSelfCare;
             background-image: url(../images/icon-self-care.svg);
         } //fin selfCareCard
@@ -207,3 +216,98 @@ body {
         }
     }
 } //fin body
+
+@media (min-width: 540px) {
+    body {
+        #container {
+            width: 540px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: min-content repeat(3, 1fr);
+
+            #mainCard {
+                width: 100%;
+                grid-column: 1 / span 2;
+                grid-row: 1 / span 1;
+            } //fin mainCard
+
+            .card {
+                width: auto;
+                height: 245px;
+            } //fin card
+        } //fin container
+    } //fin body
+} //fin media (min-width: 540px)
+
+@media (min-width: 810px) {
+    body {
+        #container {
+            width: 810px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: min-content repeat(3, 1fr);
+
+            #mainCard {
+                width: 100%;
+                grid-column: 1 / span 3;
+                grid-row: 1 / span 1;
+            } //fin mainCard
+
+            .card {
+                width: auto;
+                height: 245px;
+            } //fin card
+        } //fin container
+    } //fin body
+} //fin media (min-width: 810px)
+
+@media (min-width: 1080px) {
+    body {
+        #container {
+            width: 1080px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            #mainCard {
+                width: 100%;
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 2;
+
+                #user {
+                    width: 100%;
+                    height: 70%;
+                    padding: 30px 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: start;
+
+                    #userAvatar {
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    #userData {
+                        #userName {
+                            font-size: 2.1em;
+                        }
+                    }
+                } // fin user
+
+                #times {
+                    // background-color: yellowgreen;
+                    width: 100%;
+                    height: 30%;
+                    margin: 0px;
+                    padding: 0px 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+            } //fin mainCard
+
+            .card {
+                width: auto;
+                height: 245px;
+            } //fin card
+        } //fin container
+    } //fin body
+} //fin media (min-width: 1080px)

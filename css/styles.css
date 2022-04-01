@@ -35,16 +35,18 @@ body #container {
   -ms-grid-rows: min-content (1fr)[6];
       grid-template-rows: -webkit-min-content repeat(6, 1fr);
       grid-template-rows: min-content repeat(6, 1fr);
-  row-gap: 20px;
+  gap: 20px;
 }
 
 body #container #mainCard {
   width: 100%;
   background-color: #1c1f4a;
-  -ms-grid-columns: 1/2;
-      grid-template-columns: 1/2;
-  -ms-grid-rows: 1 / span 1;
-      grid-template-rows: 1 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
   border-radius: 15px;
 }
 
@@ -100,17 +102,16 @@ body #container #mainCard #times {
 
 body #container #mainCard #times a {
   cursor: pointer;
+  text-decoration: none;
 }
 
-body #container #mainCard #times a:active {
-  color: white;
+body #container #mainCard #times a:hover {
+  color: #bdc1ff;
 }
 
 body #container .card {
   width: 100%;
   height: 160px;
-  -ms-grid-columns: 1/2;
-      grid-template-columns: 1/2;
   border-radius: 15px;
   background-repeat: no-repeat;
   background-position: 95% -8%;
@@ -119,7 +120,7 @@ body #container .card {
 
 body #container .card .cardData {
   width: 100%;
-  height: 125px;
+  height: 78%;
   padding: 25px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,6 +163,11 @@ body #container .card .cardData .cardDataHead .cardName {
 body #container .card .cardData .cardDataHead .cardMenu {
   font-size: 1.5em;
   font-weight: 500;
+  cursor: pointer;
+}
+
+body #container .card .cardData .cardDataHead .cardMenu:hover {
+  color: #bdc1ff;
 }
 
 body #container .card .cardData .cardDataResults {
@@ -190,44 +196,36 @@ body #container .card .cardData .cardDataResults .last {
   font-size: 0.8em;
 }
 
+body #container .card .cardData:hover {
+  background-color: #2a2f6f;
+}
+
 body #container #workCard {
-  -ms-grid-rows: 2 / span 1;
-      grid-template-rows: 2 / span 1;
   background-color: #ff8c66;
   background-image: url(../images/icon-work.svg);
 }
 
 body #container #playCard {
-  -ms-grid-rows: 3 / span 1;
-      grid-template-rows: 3 / span 1;
   background-color: #56c2e6;
   background-image: url(../images/icon-play.svg);
 }
 
 body #container #studyCard {
-  -ms-grid-rows: 4 / span 1;
-      grid-template-rows: 4 / span 1;
   background-color: #ff5c7c;
   background-image: url(../images/icon-study.svg);
 }
 
 body #container #exerciseCard {
-  -ms-grid-rows: 5 / span 1;
-      grid-template-rows: 5 / span 1;
   background-color: #4acf81;
   background-image: url(../images/icon-exercise.svg);
 }
 
 body #container #socialCard {
-  -ms-grid-rows: 6 / span 1;
-      grid-template-rows: 6 / span 1;
   background-color: #7536d3;
   background-image: url(../images/icon-social.svg);
 }
 
 body #container #selfCareCard {
-  -ms-grid-rows: 7 / span 1;
-      grid-template-rows: 7 / span 1;
   background-color: #f1c65b;
   background-image: url(../images/icon-self-care.svg);
 }
@@ -241,5 +239,117 @@ body .attribution a {
   font-size: 1.2em;
   text-decoration: none;
   color: #4acf81;
+}
+
+@media (min-width: 540px) {
+  body #container {
+    width: 540px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: min-content (1fr)[3];
+        grid-template-rows: -webkit-min-content repeat(3, 1fr);
+        grid-template-rows: min-content repeat(3, 1fr);
+  }
+  body #container #mainCard {
+    width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / span 1;
+  }
+  body #container .card {
+    width: auto;
+    height: 245px;
+  }
+}
+
+@media (min-width: 810px) {
+  body #container {
+    width: 810px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: min-content (1fr)[3];
+        grid-template-rows: -webkit-min-content repeat(3, 1fr);
+        grid-template-rows: min-content repeat(3, 1fr);
+  }
+  body #container #mainCard {
+    width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / span 1;
+  }
+  body #container .card {
+    width: auto;
+    height: 245px;
+  }
+}
+
+@media (min-width: 1080px) {
+  body #container {
+    width: 1080px;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+  body #container #mainCard {
+    width: 100%;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / span 2;
+  }
+  body #container #mainCard #user {
+    width: 100%;
+    height: 70%;
+    padding: 30px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  body #container #mainCard #user #userAvatar {
+    width: 90px;
+    height: 90px;
+  }
+  body #container #mainCard #user #userData #userName {
+    font-size: 2.1em;
+  }
+  body #container #mainCard #times {
+    width: 100%;
+    height: 30%;
+    margin: 0px;
+    padding: 0px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body #container .card {
+    width: auto;
+    height: 245px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
