@@ -30,17 +30,23 @@ Users should be able to:
 
 ### Screenshot
 
+-   Mobile version screenshot
+
 ![Mobile version screenshot](./screenshots/mobile-screenshot.png)
 
-![Mobile active state version screenshot](./screenshots/mobile-active-screenshot.png)
+-   Mobile active state version screenshot
+    ![Mobile active state version screenshot](./screenshots/mobile-active-screenshot.png)
 
-![Destop version screenshot](./screenshots/desktop-screenshot.png)
+-   Destop version screenshot
+    ![Destop version screenshot](./screenshots/desktop-screenshot.png)
 
-![Destop active state version screenshot](./screenshots/desktop-active-screenshot.png)
+-   Destop active state version screenshot
+    ![Destop active state version screenshot](./screenshots/desktop-active-screenshot.png)
 
 ![Tablet version screenshot](./screenshots/tablet-screenshot.png)
 
-![Tablet version screenshot](./screenshots/tablet-active-screenshot.png)
+-   Tablet active state version screenshot
+    ![Tablet active state version screenshot](./screenshots/tablet-active-screenshot.png)
 
 ### Links
 
@@ -57,7 +63,7 @@ I'm just starting to learn web development, for now I only know some html, css (
 -   CSS custom properties
 -   Css Flexbox
 -   Css pre-processor sass
--   JavaScrip
+-   JavaScript
 -   Mobile-first workflow
 
 ### What I learned
