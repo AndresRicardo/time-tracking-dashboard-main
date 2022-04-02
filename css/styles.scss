@@ -100,6 +100,10 @@ body {
                 a:hover {
                     color: $colorPaleBlue;
                 }
+
+                #daily {
+                    color: white;
+                }
             }
         } //fin mainCard
 
@@ -156,11 +160,13 @@ body {
                         font-size: 2em;
                         font-weight: $typFontWeightLight;
                         color: white;
+                        text-align: left;
                     }
                     .last {
                         margin: 0px;
                         color: $colorPaleBlue;
                         font-size: 0.8em;
+                        text-align: right;
                     }
                 } //fin cardDataResults
             } //fin cardData

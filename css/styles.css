@@ -109,6 +109,10 @@ body #container #mainCard #times a:hover {
   color: #bdc1ff;
 }
 
+body #container #mainCard #times #daily {
+  color: white;
+}
+
 body #container .card {
   width: 100%;
   height: 160px;
@@ -188,12 +192,14 @@ body #container .card .cardData .cardDataResults .totalTime {
   font-size: 2em;
   font-weight: 300;
   color: white;
+  text-align: left;
 }
 
 body #container .card .cardData .cardDataResults .last {
   margin: 0px;
   color: #bdc1ff;
   font-size: 0.8em;
+  text-align: right;
 }
 
 body #container .card .cardData:hover {
