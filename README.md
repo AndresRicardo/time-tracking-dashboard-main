@@ -40,6 +40,8 @@ Users should be able to:
 
 ![Tablet version screenshot](./screenshots/tablet-screenshot.png)
 
+![Tablet version screenshot](./screenshots/tablet-active-screenshot.png)
+
 ### Links
 
 -   Solution URL: [Github repository](https://github.com/AndresRicardo/time-tracking-dashboard-main)
